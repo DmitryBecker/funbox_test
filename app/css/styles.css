@@ -1,0 +1,222 @@
+.ContentContainer {
+  margin: auto;
+  width: 1280px;
+  height: 680px;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.PageBackground {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(../img/background.png);
+  background-color: #fff;
+}
+
+.PageHeading {
+  margin: 0;
+  padding-top: 36px;
+  font: 100 36px 'Exo 2.0 Thin', sans-serif;
+  color: #fff;
+  text-shadow: 0 1px 1px #000;
+  text-align: center;
+}
+
+.ContainerWrapper {
+  display: inline-block;
+  width: 320px;
+  height: auto;
+  margin-top: 23px;
+  margin-left: 80px;
+  vertical-align: top;
+}
+
+.Card {
+  margin: 0;
+  width: 320px;
+  height: 480px;
+  background-color: #2ea8e6;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 10%);
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 10%);
+  cursor: pointer;
+}
+
+.Card::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 312px;
+  height: 472px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 10%);
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 10%);
+  z-index: 1;
+}
+
+.Card_active {
+  background-color: #e52e7a;
+}
+
+.Card_active .Card-ItemWeight {
+  background-color: #e52e7a;
+}
+
+.Card:hover, .Card:hover .Card-ItemWeight {
+  background-color: #e52e7a;
+}
+
+.Card-Heading {
+  position: relative;
+  font: 400 16px "Trebuchet MS", sans-serif;
+  color: #666666;
+  margin: 0;
+  padding: 21px 0 0 51px;
+  z-index: 2;
+}
+
+.Card-Title {
+  position: relative;
+  font: 700 48px "Trebuchet MS", sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 6px 0 0 48px;
+  z-index: 3;
+}
+
+.Card-SubTitle {
+  position: relative;
+  font: 700 24px "Trebuchet MS", sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0 0 0 51px;
+  z-index: 4;
+}
+
+.Card-Details {
+  position: relative;
+  font: 400 14px/16px "Trebuchet MS", sans-serif;
+  color: #666666;
+  margin: 0;
+  padding: 15px 0 0 51px;
+  z-index: 5;
+}
+
+.Card-Details_font_bold {
+  font-weight: 700;
+}
+
+.Card-Image {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  z-index: 6;
+}
+
+.Card-ItemWeight {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 80px;
+  height: 80px;
+  background-color: #2ea8e6;
+  border-radius: 50%;
+  z-index: 7;
+}
+
+.Card-ItemWeight_active {
+  background-color: #e52e7a;
+}
+
+.Card-ItemWeightText {
+  margin: 0;
+  padding-top: 24px;
+  text-align: center;
+  font: 400 42px/22px "Trebuchet MS", sans-serif;
+  color: #fff;
+}
+
+.Card-ItemWeightText_font_s {
+  margin: 0;
+  padding: 0 30px;
+  font-size: 21px;
+}
+
+.PromotionText {
+  margin: 0;
+  padding-top: 14px;
+  font: 13px "Trebuchet MS", sans-serif;
+  color: #fff;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.Link {
+  font: 700 13px "Trebuchet MS", sans-serif;
+  color: #22a7e9;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .ContentContainer {
+    margin: 5%;
+    width: auto;
+  }
+  .PageBackground {
+    height: auto;
+    position: relative;
+  }
+  .PageHeading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  .ContainerWrapper {
+    margin-top: 0;
+    margin-left: 0px;
+    width: 100%;
+  }
+  .Card {
+    margin-left: 5%;
+    width: 90%;
+  }
+  .Card::before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    width: 96%;
+    height: 472px;
+  }
+  .Card-Heading {
+    font-size: 14px;
+  }
+  .Card-Title {
+    font-size: 38px;
+  }
+  .Card-Image {
+    width: 278px;
+    height: 250px;
+  }
+  .PromotionText {
+    padding-bottom: 14px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .PageBackground {
+    text-align: center;
+  }
+  .ContainerWrapper {
+    width: 49%;
+    text-align: left;
+  }
+}

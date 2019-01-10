@@ -1,0 +1,100 @@
+.Card {
+	margin: 0;
+	width: 320px;
+	height: 480px;
+	background-color: $card-color-bg;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	-webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 10%);
+	clip-path: polygon(15% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 10%);
+	cursor: pointer;
+}
+.Card::before {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 312px;
+	height: 472px;
+	border-radius: 10px;
+	background-color: $card-color-bg-before;
+	-webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 10%);
+	clip-path: polygon(15% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 10%);
+	z-index: 1;
+}
+.Card_active {
+	background-color: $card-color-bg-active-hover;
+}
+.Card_active .Card-ItemWeight {
+	background-color: $card-color-bg-active-hover;
+  }
+.Card:hover, .Card:hover .Card-ItemWeight {
+	background-color: $card-color-bg-active-hover;
+}
+.Card-Heading {
+	position: relative;
+	font: 400 16px $main-font;
+	color: #666666;
+	margin: 0;
+	padding: 21px 0 0 51px;
+	z-index: 2;
+}
+.Card-Title {
+	position: relative;
+	font: 700 48px $main-font;
+	color: #000;
+	margin: 0;
+	padding: 6px 0 0 48px;
+	z-index: 3;
+}
+.Card-SubTitle {
+	position: relative;
+	font: 700 24px $main-font;
+	color: #000;
+	margin: 0;
+	padding: 0 0 0 51px;
+	z-index: 4;
+}
+.Card-Details {
+	position: relative;
+	font: 400 14px/16px $main-font;
+	color: #666666;
+	margin: 0;
+	padding: 15px 0 0 51px;
+	z-index: 5;
+}
+.Card-Details_font_bold {
+	font-weight: 700;
+}
+.Card-Image {
+	position: absolute;
+	bottom: 4px;
+	left: 4px;
+	z-index: 6;
+}
+.Card-ItemWeight {
+	position: absolute;
+	right: 16px;
+	bottom: 16px;
+	width: 80px;
+	height: 80px;
+	background-color: $card-color-bg;
+	border-radius: 50%;
+	z-index: 7;
+}
+.Card-ItemWeight_active {
+	background-color: $card-color-bg-active-hover;
+}
+.Card-ItemWeightText {
+	margin: 0;
+	padding-top: 24px;
+	text-align: center;
+	font: 400 42px/22px $main-font;
+	color: #fff;
+}
+.Card-ItemWeightText_font_s {
+	margin: 0;
+	padding: 0 30px;
+	font-size: 21px;
+}

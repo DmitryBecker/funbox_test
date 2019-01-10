@@ -1,0 +1,45 @@
+@media screen and (max-width: 768px) {
+	.ContentContainer {
+		margin: 5%;
+		width: auto;
+	}
+	.PageBackground {
+		height: auto;
+		position: relative;
+	}
+	.PageHeading {
+		padding-top: 10px;
+		padding-bottom: 10px; 
+		font-size: 20px;		
+	}
+	.ContainerWrapper {
+		margin-top: 0;
+		margin-left: 0px;
+		width: 100%;
+	}
+	.Card {
+		margin-left: 5%; 
+		width: 90%;
+	}
+	.Card::before {
+		content: "";
+		position: absolute;
+		top: 1%;
+		left: 2%;
+		width: 96%;
+		height: 472px;
+	}
+	.Card-Heading {
+		font-size: 14px;
+	}
+	.Card-Title {
+		font-size: 38px;
+	}
+	.Card-Image {
+		width: 278px;
+		height: 250px;
+	}
+	.PromotionText {
+		padding-bottom: 14px;
+	}
+}
